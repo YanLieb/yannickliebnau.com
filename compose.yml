@@ -1,0 +1,22 @@
+services:
+  nextjs-app:
+    image: node:20-alpine
+    container_name: portfolio-app
+    working_dir: /app
+    volumes:
+      - .:/app
+    ports:
+      - "3000:3000"
+    command: sh -c "npm install -g pnpm && pnpm install && pnpm build && pnpm start"
+    depends_on:
+      - database
+    env_file:
+      - .env
+    restart: always
+
+  database:
+    image: mongo:latest
+    container_name: portfolio-db
+    volumes:
+      - ./mongo-data:/data/db
+    restart: always
