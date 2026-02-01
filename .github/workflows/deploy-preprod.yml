@@ -11,6 +11,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Connect to Tailscale
+        uses: tailscale/github-action@v2
+        with:
+          authkey: ${{ secrets.TS_AUTHKEY }}
+
       - name: Deploy to Server via SSH
         uses: appleboy/ssh-action@master
         with:
@@ -19,7 +24,5 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             cd /DATA/AppData/preprod.yannickliebnau.com
-            git checkout preprod
             git pull origin preprod
-            cd ..
             docker compose up -d --build --force-recreate
