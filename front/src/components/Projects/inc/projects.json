@@ -1,0 +1,88 @@
+{
+  "projects": {
+    "JavaScript/TypeScript": [
+      {
+        "title": "Xca Portfolio",
+        "description": "Digital designer portfolio, made with Strapi, Next.js & PostgreSQL",
+        "infos": "Designed by Xcaret Castillo Sanchez",
+        "link": "https://xca-portfolio.com"
+      },
+      {
+        "title": "Echoes in a bottle",
+        "description": "Creative 3D web app with AI integration, made with next.js & Gemini API",
+        "infos": "Designed by Xcaret Castillo Sanchez",
+        "link": "https://echoesinabottle.vercel.app/"
+      },
+      {
+        "title": "Tasks app",
+        "description": "Task management application built with Node.js & React",
+        "infos": "For practice purposes",
+        "link": "https://task-app-yanlieb.vercel.app/"
+      },
+      {
+        "title": "Random quotes",
+        "description": "A simple web app that displays random Kaamelott quotes, made with Node.js and React",
+        "infos": "For practice purposes",
+        "link": "https://random-quote-yanlieb.vercel.app/"
+      }
+    ],
+    "WordPress": [
+      {
+        "title": "Elix Group",
+        "description": "Company website for Elix Group, an alliance of prestigious watchmaking and luxury brands, made with ACF plugin & TailwindCSS",
+        "infos": "An Agence Ekypia project",
+        "link": "https://elix-group.ch"
+      },
+      {
+        "title": "Mecaloire & Production France",
+        "description": "Website for Mecaloire & Production France, a network that supports companies in the mechanical and industrial sector. Mecaloire was made with Elementor/ACF, Production France with ACF (https://produirenfrance.fr)",
+        "infos": "An Agence Ekypia project",
+        "link": "https://www.mecaloire.fr/"
+      },
+      {
+        "title": "Boyauderie des Savoie & Panier",
+        "description": "Website for Boyauderie des Savoie & Panier, a company specializing hog, sheep & cow casings, made with ACF plugin & GSAP",
+        "infos": "An Agence Ekypia project",
+        "link": "https://bsavoie.fr"
+      },
+      {
+        "title": "Labels Saveurs",
+        "description": "Website for Salon Labels Saveur, a trade fair showcasing regional food products, gastronomy, and culinary know-how.",
+        "infos": "An Agence Ekypia project",
+        "link": "https://www.labels-saveurs.fr/"
+      }
+    ],
+    "Prestashop": [
+      {
+        "title": "Ethnic Blue",
+        "description": "E-commerce website for Ethnic Blue, a fashion french/portuguese brand for men.",
+        "infos": "An Agence Ekypia project",
+        "link": "https://ethnicblue.com"
+      },
+      {
+        "title": "Click for Foot",
+        "description": "E-commerce website for Click for Foot, a brand specializing in football equipment.",
+        "infos": "An Agence Ekypia project",
+        "link": "https://clickforfoot.com"
+      },
+      {
+        "title": "Patrick Font",
+        "description": "E-commerce website for Patrick Font, a premium juice producer brand.",
+        "infos": "An Agence Ekypia project",
+        "link": "https://patrick-font.com/"
+      },
+      {
+        "title": "Evenplast",
+        "description": "E-commerce catalog for Evenplast, a brand specializing in industrial packaging.",
+        "infos": "An Agence Ekypia project",
+        "link": "https://catalogue.evenplast.com/"
+      },
+      {
+        "title": "La Source",
+        "description": "Website for La Source, manufacturer and distributor of natural products dedicated to health and well-being.",
+        "infos": "An Agence Ekypia project",
+        "link": "https://www.la-source.info/"
+      }
+    ]
+  }
+}

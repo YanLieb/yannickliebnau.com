@@ -1,0 +1,19 @@
+.project__link a {
+  & .underlined {
+    --width: 0;
+    --left: -100%;
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      display: block;
+      width: var(--width);
+      height: 1px;
+      position: absolute;
+      bottom: 0;
+      left: var(--left);
+      background-color: var(--color-gray-900);
+    }
+  }
+}

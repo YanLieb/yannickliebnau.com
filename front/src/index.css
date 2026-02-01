@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: KulimPark;
+  font-style: normal;
+  font-weight: 200;
+  src: url("/fonts/KulimPark-ExtraLight.otf");
+}
+
+@font-face {
+  font-family: KulimPark;
+  font-style: normal;
+  font-weight: 300;
+  src: url("/fonts/KulimPark-Light.otf");
+}
+
+@font-face {
+  font-family: KulimPark;
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/KulimPark-Regular.otf");
+}
+
+@font-face {
+  font-family: Ubuntu Sans;
+  font-style: normal;
+  font-weight: 100 800;
+  src: url("/fonts/UbuntuSans-VariableFont_wdth,wght.ttf");
+}
+
+@theme {
+  --font-heading: "KulimPark", sans-serif;
+  --default-font-family: "Ubuntu Sans", sans-serif;
+  --text-h1: 4rem;
+  --text-h1--line-height: 1;
+  --text-h1--font-weight: 200;
+  --text-h2: 3rem;
+  --text-h2--font-weight: 100;
+  --text-h3: 2rem;
+  --text-h3--font-weight: 100;
+  --color-black: #0d1821;
+}
+
+html {
+  font-family: var(--default-font-family);
+  @apply font-extralight text-gray-900;
+}
+
+h1,
+.h1 {
+  @apply font-heading text-h2 sm:text-h1;
+}
+
+h2,
+.h2 {
+  @apply text-h3 sm:text-h2;
+}
+
+h3,
+.h3 {
+  @apply text-xl font-thin sm:text-h3;
+}
+
+.container {
+  @apply mx-auto px-2;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.active-project,
+.active-category {
+  font-weight: 400;
+  cursor: auto;
+  animation: blink 2000ms ease-in-out infinite;
+}

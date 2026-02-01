@@ -1,0 +1,29 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/dist/style.css">
+    {{#if styles}}
+      <link rel="stylesheet" href="{{styles}}" class="css" />
+    {{/if}}
+    <title>{{title}}</title>
+  </head>
+  <body{{#if bodyId}} id="{{bodyId}}"{{/if}} class="flex min-h-lvh{{#if bodyClasses}} {{bodyClasses}}{{/if}}">
+   {{> menu}}
+
+    <main class="container flex-10/12 p-8 h-full flex flex-col min-h-lvh">
+    {{> header}}
+      <div class="page-content grow-1">
+        {{{body}}}
+      </div>
+    {{> footer}}
+    </main>
+
+
+    <script src="/dist/script.js" defer></script>
+    
+    {{#if scripts}}
+      <script src="{{scripts}}" defer></script>
+    {{/if}}
+  </body>
+</html>

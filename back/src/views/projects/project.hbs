@@ -1,0 +1,69 @@
+<form id="project_form" class="form{{#if project}} project-form-update{{else}} project-form-new{{/if}}">
+  <div class="form__title mb-4">
+    <label for="project_title">Title</label>
+    <input
+      type="text"
+      name="title"
+      id="project_title"
+      placeholder="Project Title"
+      required
+      {{#if project.title}}value="{{project.title}}"{{/if}}
+    />
+  </div>
+
+  <div class="form__slug mb-4">
+    <label for="project_slug">Slug</label>
+    <input 
+    type="text"
+    name="slug"
+    id="project_slug"
+    {{#if project.slug}}value="{{project.slug}}"{{/if}}
+    />
+  </div>
+  
+  <div class="form__description mb-4">
+    <label for="project_description">Description</label>
+    <textarea
+      name="description"
+      id="project_description"
+      placeholder="Project Description"
+      rows="20"
+      cols="40"
+      class="min-h-40"
+      >{{#if project.description}}{{project.description}}{{/if}}</textarea>
+  </div>
+  
+  <div class="form__categories mb-4">
+    <select name="categories" id="project_categories" multiple placeholder="Select the project categories">
+        <option value="">Select categories...</option>
+      {{#each categories}}
+        <option value="{{this._id}}"{{#if this.selected}} selected{{/if}}>{{this.name}}</option>
+      {{/each}}
+    </select>
+  </div>
+  
+  <div class="form__link mb-4">
+    <label for="project_link">Link</label>
+    <input
+      type="url"
+      name="link"
+      id="project_link"
+      placeholder="https://project-link.com"
+      {{#if project.link}}value="{{project.link}}"{{else}}value="https://"{{/if}}
+    />
+  </div>
+  
+  <div class="form__submit">
+    {{#if project.id}}
+      <input 
+        type="hidden" 
+        name="id" 
+        id="project_id" 
+        value="{{project.id}}" />
+      <input type="submit" value="Update" class="btn" />
+    {{else}}
+      <input type="submit" value="Save" class="btn" />
+    {{/if}}
+  </div>
+
+</form>

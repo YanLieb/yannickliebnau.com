@@ -1,0 +1,41 @@
+{
+  "name": "back",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsx src/server.ts",
+    "dev": "concurrently \"npm run watch:client\" \"npm run dev:server\"",
+    "dev:server": "tsx watch src/server.ts",
+    "build:client": "vite build",
+    "watch:client": "vite build --watch",
+    "kill-cache": "powershell \"Get-Process -Name node -ErrorAction SilentlyContinue | Stop-Process -Force\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.13",
+    "express": "^5.1.0",
+    "hbs": "^4.2.0",
+    "mongodb": "^6.19.0",
+    "mongoose": "^8.18.0",
+    "slug": "^11.0.0",
+    "tailwindcss": "^4.1.13",
+    "tom-select": "^2.4.3"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/hbs": "^4.0.5",
+    "@types/mongoose": "^5.11.96",
+    "@types/slug": "^5.0.9",
+    "concurrently": "^9.2.1",
+    "dotenv": "^17.2.1",
+    "esbuild": "0.25.9",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.4"
+  }
+}
