@@ -18,5 +18,5 @@ services:
     image: mongo:latest
     container_name: portfolio-db
     volumes:
-      - ./mongo-data:/data/db
+      - /DATA/AppData/preprod.yannickliebnau.com/mongo-data:/data/db
     restart: always
