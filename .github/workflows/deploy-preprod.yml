@@ -16,14 +16,15 @@ jobs:
           if [ -z "${{ secrets.TS_OAUTH_CLIENT_ID }}" ]; then echo "ID is empty"; else echo "ID is set"; fi
           if [ -z "${{ secrets.TS_OAUTH_SECRET }}" ]; then echo "Secret is empty"; else echo "Secret is set"; fi
 
-      - name: Connect to Tailscale
-        uses: tailscale/github-action@v2
+      - name: Install and Connect Tailscale Manually
+        run: |
+          curl -fsSL https://tailscale.com/install.sh | sh
+          sudo tailscaled --state=mem: &
+          sleep 5
+          sudo tailscale up --authkey=${{ secrets.TS_OAUTH_SECRET }} --hostname=github-action-runner --accept-routes
         env:
           TS_OAUTH_CLIENT_ID: ${{ secrets.TS_OAUTH_CLIENT_ID }}
           TS_OAUTH_SECRET: ${{ secrets.TS_OAUTH_SECRET }}
-        with:
-          oauth-client-id: ${{ secrets.TS_OAUTH_CLIENT_ID }}
-          oauth-secret: ${{ secrets.TS_OAUTH_SECRET }}
 
       - name: Deploy to Server via SSH
         uses: appleboy/ssh-action@master
